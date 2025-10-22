@@ -5,10 +5,10 @@
 
 import cv2 as cv
 
-#img = cv.imread('Resources/Photos/cat_large.jpg')
-#cv.imshow('Cat', img)
 
 def rescaleFrame(frame, scale = 0.75):
+    #works for IMAGES, VIDEOS, and LIVE VIDEO FEED 
+
     print(frame.shape)   #prints original dimensions
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale) 
@@ -16,7 +16,7 @@ def rescaleFrame(frame, scale = 0.75):
 
     return cv.resize(frame, dimensions, interpolation = cv.INTER_AREA) #resizes the frame to "dimensions"; does the heavy liftin
 
-
+'''
 #pasted from read.py
 capture = cv.VideoCapture('Resources/Videos/dog.mp4') #can take integer arguments; 0 for default camera, 1 for external camera, etc.
 while True:
@@ -33,8 +33,10 @@ while True:
 
 capture.release()   #releases the video capture object
 cv.destroyAllWindows()  #closes all OpenCV windows
+'''
 
 def changeRes(width, height): #ideal width and height
+    #works FOR LIVE VIDEO FEED ONLY
     capture.set(3, width)   #3 is the property of the class for width
     capture.set(4, height)  #4 is the property of the class for height
 
