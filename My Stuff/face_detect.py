@@ -30,6 +30,4 @@ cv.imshow('detected faces', img)
 #you counter this by modifying scaleFactor & minNeighbors
 
 
-
-
 cv.waitKey(0)
