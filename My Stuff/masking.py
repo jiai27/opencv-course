@@ -11,7 +11,7 @@ circle = cv.circle(blank.copy(), (img.shape[1]//2+45, img.shape[0]//2), 100, 255
 #cv.imshow('mask', mask)
 rectangle = cv.rectangle(blank.copy(), (30,30), (370,370), 255, -1)
 
-weird_shape = cv.bitwise_and(circle,rectangle)
+weird_shape = cv.bitwise_and(circle,rectangle) #mask needs to be same size as image
 cv.imshow('weird shape', weird_shape)
 
 #mask intersection
