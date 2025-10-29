@@ -1,8 +1,10 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('Resources/Photos/cats 2.jpg')
-#cv.imshow('vlaj',img)
+#img = cv.imread('Resources/Photos/vlaj.png')
+#macos change:
+img = cv.imread('vluigi.png')
+cv.imshow('vlaj',img)
 
 blank = np.zeros(img.shape[:2], dtype='uint8')
 #cv.imshow('blank',blank)
@@ -17,8 +19,6 @@ cv.imshow('weird shape', weird_shape)
 #mask intersection
 masked = cv.bitwise_and(img, img, mask=weird_shape)
 cv.imshow('weird shaped masked image', masked)
-
-
 
 
 cv.waitKey(0)

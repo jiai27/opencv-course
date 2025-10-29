@@ -2,7 +2,9 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv.imread('Resources/Photos/cats.jpg')
+#img = cv.imread('Resources/Photos/cats.jpg')
+#macos
+img = cv.imread('vluigi.png')
 
 '''
 gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
